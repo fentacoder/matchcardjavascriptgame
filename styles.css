@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 1vh;
+    column-gap: 1vh;
+}
+
+.card-hidden{
+    animation-name: hide-card;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-card{
+    0%{
+        height: 25vh;
+        background: #ccc; 
+        border: #ccc 1px solid; 
+        border-radius: 10px;
+    }
+
+    50%{
+        height: 25vh;
+        background: #ccc; 
+        border: #ccc 1px solid; 
+        border-radius: 10px;
+        transform: translateY(20px);
+        box-shadow: 10px 10px 10px 10px #888;
+    }
+
+    100%{
+        height: 25vh;
+        background: #ccc; 
+        border: #ccc 1px solid; 
+        border-radius: 10px;
+        transform: translateY(-20px);
+        transform: rotateY(180deg);
+    }
+}
+
+.card-show{
+    animation-name: show-card;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-card{
+    0%{
+        height: 25vh;
+        background: #ccc; 
+        border: #ccc 1px solid; 
+        border-radius: 10px;
+    }
+
+    50%{
+        height: 25vh;
+        background: #ccc; 
+        border: #ccc 1px solid; 
+        border-radius: 10px;
+        transform: translateY(-20px);
+        box-shadow: 10px 10px 10px 10px #888;
+    }
+
+    100%{
+        height: 25vh;
+        background: none; 
+        border: white 1px solid; 
+        border-radius: 10px;
+        transform: translateY(20px);
+        transform: rotateY(180deg);
+    }
+}
+
+.grid-fade{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 1vh;
+    column-gap: 1vh;
+    animation-name: fade-grid;
+    animation-name: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-grid{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.pic-show{
+    animation-name: show-pic;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-pic{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.pic-hide{
+    animation-name: hide-pic;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-pic{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.already-hidden-card{
+    height: 25vh;
+    background: #ccc; 
+    border: #ccc 1px solid; 
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+
+.already-hidden-pic{
+    opacity: 0;
+}
